@@ -1,0 +1,191 @@
+@media (max-width: 991px) {
+	#main-menu {
+		width: 100%;
+	}
+	#content { margin: 8em 4em 0em 4em; }
+	.dropdown {top:8em;}
+	#bottom-border {display: none}
+
+
+	header #header-desc {
+		width:80%;
+		left:10%;
+		bottom:10%;
+		text-align: center;
+	}
+
+	header {height: 400px;}
+
+	header #title {
+		font-size:6em;
+	}
+
+	.collection-name {
+		margin:100px 2em;
+		font-size: 1em;
+	}
+
+	.promotion {
+		height:250px;
+	}
+
+	#promotion-desc #title {
+
+		font-size:2em;
+	}
+
+	#promotion-desc {
+		top:20px;
+		font-size: .8em;
+	}
+	#shop-point { display:none;}
+
+
+	#filters, #account-settings-link {
+		width: 100%!important;
+		float: none!important;
+		height: auto;
+		border-right: none;
+	}
+
+	#products-list, #account-form {
+		width: 100%;
+		float: none;
+		border:none;
+		margin-top: 1.5em;
+	}
+
+	#account-settings-link a {
+		width: 45%;
+		float: left;
+		margin-right: 2.5%;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.collection-name {
+		margin:100px 2em;
+		font-size: 1em;
+	}
+	
+	#bottom-border, #left-border, #right-border, #main-menu, #scrolling-menu, #shop-point { display:none;}
+
+	#content { margin: 4em 0 0 0; }
+
+	.side-menu {
+		left: 0em;
+	}
+
+	.side-menu {width: 100%}
+
+	
+
+	.side-menu section {
+		margin-top:5%;
+	}
+
+	#main-menu-on-side, #toTop {
+		display: block;
+	}
+
+
+	.side-menu a {
+		font-size: 1.1em;
+		padding:0.3em 0.3em 0.3em 10%;
+	}
+
+	h2 {
+		font-size: 2.2em;
+	}
+	.promotion {
+		height:200px;
+	}
+
+	#breadcrumbs {
+		padding:2em;
+	}
+
+	#content-inside {
+		padding:2em;
+	}
+
+
+	#best-sellers {
+		padding: 1em;
+	}
+
+	header #description {
+		font-size: .8em;
+	}
+
+	.nav-button {
+		width: 100%;
+	}
+
+	header #title {
+		font-size:4em;
+	}
+
+	article .post {
+		width:100%;
+		border-right: none;
+		float: none;
+	}
+
+	.images {
+		width:100%;
+		float:none;
+	}
+
+
+}
+
+
+@media (max-width: 600px) {
+	header {height: 200px;}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+
+
+}
+
+@media (max-width: 420px) {
+	#login-content {
+		width: 190%;
+	}
+	header img {
+		height: 100%;
+	}
+
+	header #description {
+		display: none;
+	}
+
+	#site-name {
+		display: none;
+	}
+
+	#navigation {
+		padding: 1.5em 1em 2em 1em;
+		width: 4em
+	}
+
+	footer {
+		padding: 1em;
+	}
+
+	#login #submit {      
+		float: none;
+		margin: 0.5em auto;
+	}
+
+	#login label {
+		float: none;
+		margin: 0.5em auto;
+	}
+}

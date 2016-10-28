@@ -1,0 +1,162 @@
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 1em;
+}
+h2 {
+    text-align: center;
+    margin:0.5em auto;
+}
+.wrapper {
+    width: 70%;
+    margin: 10% auto;
+}
+.mobile, .desktop, .laptop, .tablet {
+    margin: 3em auto;
+    overflow: hidden;
+}
+iframe {
+    transform: scale(0.219);
+    -webkit-transform: scale(0.219);
+    -o-transform: scale(0.219);
+    -ms-transform: scale(0.219);
+    -moz-transform: scale(0.219);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -moz-transform-origin: top left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #fff;
+    border-color: none
+}
+.mobile {
+    background-image: url("../images/iphone-optimised.png");
+    position: relative;
+    width: 95px;
+    height: 196px;
+}
+.mobile iframe {
+    width: 323px;
+    height: 485px;
+    top: 32px;
+    left: 11px;
+}
+.tablet {
+    background-image: url("../images/ipad-optimised.png");
+    width: 246px;
+    height: 320px;
+    position: relative;
+}
+.tablet iframe {
+    width: 805px;
+    height: 1080px;
+    top: 37px;
+    left: 41px;
+}
+.laptop {
+    background-image: url("../images/laptop-screen-optimised.png");
+    width: 477px;
+    height: 307px;
+    position: relative;
+}
+.laptop iframe {
+    width: 1285px;
+    height: 805px;
+    top: 26px;
+    left: 60px;
+    transform: scale(0.277);
+    -webkit-transform: scale(0.277);
+    -o-transform: scale(0.277);
+    -ms-transform: scale(0.277);
+    -moz-transform: scale(0.277);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -moz-transform-origin: top left
+}
+.desktop {
+    position: relative;
+    width: 566px;
+    height: 538px;
+    background-image: url("../images/large-screen-optimised.png");
+}
+.desktop iframe {
+    left: 28px;
+    top: 38px;
+    width: 1600px;
+    height: 995px;
+    transform: scale(0.3181);
+    -webkit-transform: scale(0.3181);
+    -o-transform: scale(0.3181);
+    -ms-transform: scale(0.3181);
+    -moz-transform: scale(0.3181);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -moz-transform-origin: top left
+}
+
+.color-guide {
+    display: inline-block;
+    width: 20%;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: auto;
+    border:1px solid #000000;
+}
+
+
+.titles {
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: -1px;
+}
+
+.menus {
+
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.gen {
+    font-size: 3em
+}
+
+.link {
+    width: 25%;
+    padding:0.5em;
+    display: block;
+    margin:2em auto;
+    background: #CC9900;
+    color: #000000;
+    text-align: center;
+    text-transform: lowercase;
+
+}
+
+#mt {
+    width:400px;margin:0 auto;display:block;
+}
+
+#mt:after {
+    clear: both;
+    display: table;
+    content: ""
+}
