@@ -1,0 +1,341 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mix and Mash</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/jquery.nicescroll.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
+  <script type="text/javascript" src="js/animatescroll.min.js"></script>
+  <script>
+  $(function() {
+
+    $('body').animatescroll();
+    $("#member-slide > section:gt(0)").hide();
+
+    setInterval(function() {
+      $('#member-slide > section:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#member-slide');
+    },  3000);
+  });
+
+  $(document).ready(function(){
+    $('#login-trigger').click(function() {
+      $(this).next('#login-content').slideToggle(1000, "easeInOutBack");
+      $(this).toggleClass('active');                    
+      
+      if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+      else $(this).find('span').html('&#x25BC;')
+    }),
+    $('#navigation').click(function() {
+      $('.side-menu').slideToggle(1000, "easeOutElastic");
+      $('#content').toggleClass("right", 2000, "easeOutElastic");
+    }),
+    $('#currency').click(function() {
+      $('#currency-list').slideToggle(1000, "easeOutElastic");
+    }),
+    $("html").niceScroll({
+      cursorcolor:"#d5bd60",
+      cursorwidth: '10px', 
+      autohidemode: false, 
+      zindex: 99999999999999999, 
+      cursorborder: 'none', 
+      cursorborderradius: '0px'
+    });
+
+  });
+  </script>
+</head>
+<body>
+  <a onclick="$('#content').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});" id="toTop" class="entypo-up-open"></a>
+
+  <!-- untuk border kanan dan kiri -->
+
+  <section id="left-border">
+  </section>
+
+  <section id="right-border">
+  </section>
+
+  <!-- untuk daftar social media, akan hilang di mobile -->
+
+  <section id="bottom-border">
+    <section style="float:right">
+      <label>find us: </label>
+      <a href="http://twitter.com/" class="entypo-twitter"></a> 
+      <a href="http://instagram.com/" class="entypo-instagrem"></a> 
+      <a href="http://facebook.com/" class="entypo-facebook"></a> 
+      <a href="http://tumblr.com/" class="entypo-tumblr"></a> 
+    </section>
+  </section>
+
+  <nav class="side-menu" id="side-menu">
+
+    <!-- untuk navigasi halaman di index page, untuk di halaman lain akan di ganti. akan hilang jika diakses di mobile -->
+    
+    <section id="scrolling-menu" class="about">
+      <h2>Mix&Mash</h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec ligula non magna scelerisque lacinia. Praesent ex lorem, lacinia non tempus ac, suscipit sed arcu. Integer in consequat ligula, id pharetra dolor. Suspendisse consequat ornare sapien sit amet volutpat. Donec faucibus commodo sapien, non bibendum elit ultrices vitae.
+      <a href="about-us.html">Read More</a>
+    </section>
+    
+    <!-- untuk navigasi main menu, hanya akan muncul di mobile -->
+    <section id="main-menu-on-side">
+
+      <a href="index.html">Home</a>
+      <a href="products-list.html">Products</a>
+      <a href="lookbook.html">Lookbook</a>
+      <a href="promotions.html">Promotions</a>
+      <a href="contact-us.html">Contact Us</a>
+    </section>
+  </nav>
+
+  <section id="menu">
+
+    <!-- untuk nama brand dan sekaligus trigger untuk memunculkan navigasi halaman -->
+    <button id="navigation">
+
+      <section id="hamburger">
+        <span></span>
+      </section>
+
+      <section id="site-name">
+        Mix&Mash
+      </section>
+
+    </button>
+
+    <!-- untuk main menu -->
+
+    <section class="top-bar-left" id="main-menu">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown"><a href="products-list.html">Products</a>
+          <ul class="dropdown center">
+            <section class="menu-set-1 border-bottom">
+              <li><a href="products-list.html">Outerwear</a></li>
+              <li><a href="products-list.html">Dresses</a></li>
+              <li><a href="products-list.html">Shirts/Blouses</a></li>
+              <li><a href="products-list.html">T-Shirts</a></li>
+              <li><a href="products-list.html">Sweatshirts</a></li>
+              <li><a href="products-list.html">Skirts</a></li>
+              <li><a href="products-list.html">Pants</a></li>
+              <li><a href="products-list.html">Bags</a></li>
+              <li><a href="products-list.html">Shoes</a></li>
+              <li><a href="products-list.html">Accessories</a></li>
+            </section>
+            <section class="menu-set-2">
+              <li><a href="products-list.html">Collections</a></li>
+              <li><a href="products-list.html">Best Sellers</a></li>
+              <li><a href="products-list.html">New Arrivals</a></li>
+              <li><a href="products-list.html">Featured on Medias</a></li>
+            </section>
+          </ul> 
+        </li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="promotions.html">Promotions</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li class="has-dropdown"><a>Search</a>
+          <ul class="dropdown center">
+            <div id="search">
+              <input type="search" placeholder="Type the keyword" id="search-input">
+              <input type="submit" id="search-button" class="button">
+            </div>
+          </ul> 
+        </li>
+      </section>
+
+      <!-- untuk login -->
+      <section id="login">
+        <a id="login-trigger">
+          Welcome, Ilma! <span style="font-size:.5em">&#x25BC;</span>
+        </a>
+        <section id="login-content">
+          <a class="profile-link" href="cart.html">Your Cart <span class="indicator">1</span></a>
+          <a class="profile-link" href="edit-account.html">Your Account</a>
+                <!-- <a class="profile-link">Updates</a>
+                <a class="profile-link">Help</a> -->
+                <a class="profile-link" href="index.html">Logout</a>
+
+                <a id="currency">
+                  <span class="curr-label">Change Currency</span> <span class="curr">USD</span>
+                </a>
+                <section id="currency-list">
+                  <a>IDR</a>
+                  <a>EUR</a>
+                  <a>SGD</a>
+                  <a>YEN</a>
+                </section>
+              </section>
+            </section> 
+
+          </section>
+        </section>
+
+        <section id="content"> 
+
+
+          <header id="header" class="header-notindex">
+
+            <section id="header-desc">
+              <section id="title">Mix&Mash</section>
+            </section>
+
+            <section id="member-slide">
+              <section><img src="images/header1.jpg" /></section>
+              <section><img src="images/header2.jpg" /></section>
+              <section><img src="images/header3.jpg" /></section>
+              <section><img src="images/header4.jpg" /></section>
+              <section><img src="images/header5.jpg" /></section>
+            </section>
+            
+          </header>
+
+          <section id="content-inside">
+            <h2><span>Your Shopping Bag</span></h2>
+            <table width="100%" id="cart">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th width="5em">Quantity</th>
+                  <th width="10%">Price</th>
+                  <th width="10%">Total</th>
+                  <tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="images/products/1.jpg" width="20px" align="left">
+                        <a href="product-detail.html">Off-Shoulder Long Sleeve Dress</a>
+                      </td>
+                      <td>
+                        <input type="number" value="3" style="width:3em;float:left;margin-right:0.3em">
+                        <a class="entypo-trash" title="Delete Item" style="font-size:1.3em;display:inline-block;margin-top:0.4em"></a>
+                      </td>
+                      <td>
+                        $45
+                      </td>
+                      <td>
+                        $135
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2" style="text-align:right">
+                        Put your coupon code if you have one:
+                      </td>
+                      <td colspan="2">
+                        <input id="coupon" type="text" name="coupon" placeholder="Your Coupon">  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="text-align:right">
+                        <b>Subtotal:</b>
+                      </td>
+                      <td>$135</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="text-align:right">
+                        <b>Discount:</b>
+                      </td>
+                      <td>$0 (0%)</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3" style="text-align:right">
+                        <b>Total:</b>
+                      </td>
+                      <td>$135</td>
+                    </tr>
+                  </tfoot>
+                </table>
+
+
+                <section class="row small-up-1 medium-up-1 large-up-2" style="margin-left:-1em">
+                  <section class="column">
+                    <label>Returning Customer</label>
+                    <section class="term">
+                      <input id="username" type="email" name="Email" placeholder="Your email address" required>   
+                      <input id="password" type="password" name="Password" placeholder="Password" required>
+
+                      <input type="submit" id="submit" value="Log in">
+                      <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                    </section>
+
+                  </section>
+                  <section class="column">
+                    <label>New Costumer</label>
+                    <div class="term">
+                      <a href="register.html" class="register">Register</a>
+                      <a class="register">Shop as Guest</a>
+                    </div>
+                  </section>
+
+                </section>
+              </section>
+
+              <!-- footer halaman -->
+
+              <footer>
+                <section class="row small-up-1 medium-up-2 large-up-4">
+                  <section class="column footer-links">
+                    <label>Mix&Mash</label>
+                    <a href="about-us.html">About Us</a>
+                    <a href="term-of-us.html">Term of Use</a>
+                    <a href="privacy-policy">Privacy Policy</a>
+
+                    <label>User Help</label>
+                    <a href="#">User guide</a>
+                    <a href="contact-us">Q&amp;A</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Payment</a>
+                    <a href="#">Exchange/Return</a>
+                  </section>
+                  <section class="column">
+                    <label>We Accept</label>
+                    <img src="images/payment.png" alt="paypal"/>
+                    
+                    <p><label>Our Store</label>
+                      <br/>Jl. Kebon Jeruk Raya No. 27, Kebon Jeruk, Jakarta Barat
+                      <p><a href="https://www.usps.com/" target="_blank">EMS &amp; Track Your Order</a>
+                      </section>
+                      <section class="column">
+                        <label>Customer Service</label>
+                        <strong>1-855-521-5164</strong><br>
+                        <strong>E-mail : admin@website.com</strong>
+                        <p>MON-FRI <br/>9AM-6PM(GMT+9H) <br/>&amp; 10PM-7AM(GMT+9H)<br/>LUNCH <br/>12:30PM-1:30PM(GMT+9H)<br/>&amp; 2AM-3AM(GMT+9H)<br/>CLOSED<br/>Sat, Sun, Holiday
+                        </section>
+                        <section class="column">
+                          <label>Find Us On</label>
+                          <a href="http://twitter.com/" class="entypo-twitter"></a> 
+                          <a href="http://instagram.com/" class="entypo-instagrem"></a> 
+                          <a href="http://facebook.com/" class="entypo-facebook"></a> 
+                          <a href="http://tumblr.com/" class="entypo-tumblr"></a> 
+
+                          <label>Subscribe</label>
+                          <p>Subscribe to our newsletter to get news about our bestsellers and new arrived items!</p>
+                          <input type="text" id="footer-input" placeholder="Your Email Address"></input>
+                          <input type="submit" value="Subscribe"></input>
+                        </section>
+                      </section>
+                    </footer>
+
+                    <!-- credits -->
+
+                    <section id="credits">
+                      Created for ITFest UNJ<br>
+                      <a href="/baca-dulu.html">Full Credits</a>
+                    </section>
+                  </section>
+
+                </body>
+
+
+                </html>
